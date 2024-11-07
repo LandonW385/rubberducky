@@ -21,5 +21,5 @@ DELAY 1000
 GUI UPARROW
 STRING Hello, hope you enjoy the new wallpaper!
 ENTER
-STRING (￣_,￣ )
+STRING ;)
 ENTER
